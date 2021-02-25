@@ -1,5 +1,4 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const date = require(__dirname + "/date.js")
 
 const app = express();
@@ -9,7 +8,7 @@ const workItems = [];
 
 app.set('view engine', 'ejs');
 
-app.use(bodyParser.urlencoded({
+app.use(express.urlencoded({
     extended: true
 }));
 
